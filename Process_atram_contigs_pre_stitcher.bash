@@ -27,3 +27,5 @@ rm $x.oneline
 rm $x.named;
 done;
 done
+#Create taxon list for stitching.py
+ls *contig_locus*fasta | awk -F "_" '{print $1"_"$2}'|sort|uniq > Taxon_list.txt
